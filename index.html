@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luiz-Wo | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Luiz-Wo</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I am Luiz-Wo, a developer passionate about building impactful software.</p>
+        </section>
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <ul class="pill-list">
+                <li>JavaScript</li>
+                <li>HTML &amp; CSS</li>
+                <li>React</li>
+                <li>Python</li>
+                <!-- Add more skills -->
+            </ul>
+        </section>
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <strong>Project Name 1</strong><br>
+                    <span class="project-desc">Brief description.</span>
+                </li>
+                <li>
+                    <strong>Project Name 2</strong><br>
+                    <span class="project-desc">Brief description.</span>
+                </li>
+                <!-- Add more projects -->
+            </ul>
+        </section>
+        <section id="experience" class="card">
+            <h2>Experience</h2>
+            <ul class="exp-list">
+                <li>
+                    <strong>Company/Role</strong>: Time Period <br>
+                    Description of work and achievements.
+                </li>
+                <!-- Add more experience -->
+            </ul>
+        </section>
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>Email: your.email@example.com</p>
+            <p>
+                <a href="https://github.com/Luiz-Wo" target="_blank" class="btn-accent">GitHub</a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Luiz-Wo</p>
+        </div>
+    </footer>
+    <script>
+    // Fade-in sections on scroll
+    const sections = document.querySelectorAll('section');
+    const revealSection = () => {
+        const trigger = window.innerHeight * 0.85;
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < trigger) {
+                section.classList.add('visible');
+            }
+        });
+    };
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('DOMContentLoaded', revealSection);
+    </script>
+</body>
+</html>
